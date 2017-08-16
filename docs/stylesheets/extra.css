@@ -1,0 +1,24 @@
+.md-footer-nav__title {
+    font-size: 1.5rem;
+    padding: 0;
+}
+
+.md-footer-nav__link {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.md-footer-nav__link--next, .md-footer-nav__link--prev {
+    color: #fff;
+}
+
+.md-typeset h1 {
+    margin: 0 0 0;
+}
+
+@media only screen and (min-width: 76.25em) {
+
+.md-tabs~.md-main .md-nav--primary>.md-nav__list>.md-nav__item--nested {
+    font-size: 15px;
+}
+}
