@@ -1,5 +1,5 @@
 site_name: Online-Dokumentationen
-theme: material
+theme: readthedocs
 site_description: A Material Design theme for MkDocs
 site_author: Meinolf Droste
 site_url: http://mdwp-mkdocs-cms.netlify.com/
