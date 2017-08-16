@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: capriosa/mkdocs-cms
+  repo: tlcMattLarson/mkdocscms-matt-netlify
   branch: master
 
 public_folder: "site"
