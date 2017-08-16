@@ -22,12 +22,9 @@ package are recommended to be used together with the Material theme:
 
 ``` yaml
 markdown_extensions:
-  - pymdownx.arithmatex
   - pymdownx.betterem(smart_enable=all)
   - pymdownx.caret
   - pymdownx.critic
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.magiclink
   - pymdownx.mark
@@ -57,24 +54,6 @@ start and end tokens. Read the documentation for [usage notes][3].
 
   [2]: https://facelessuser.github.io/pymdown-extensions/extensions/betterem/
   [3]: https://facelessuser.github.io/pymdown-extensions/usage_notes/
-
-#### Emoji
-
-[Emoji][4] adds the ability to insert a :shit:-load of emojis that we use in
-our daily lives. See the [EmojiOne demo][5] for a list of all available
-emojis. Happy scrolling :tada:
-
-!!! warning "Legal disclaimer"
-
-    Material has no affiliation with [EmojiOne][6] which is released under
-    [CC BY 4.0][7]. When including EmojiOne images or CSS, please read the
-    [EmojiOne license][8] to ensure proper usage and attribution.
-
-  [4]: https://facelessuser.github.io/pymdown-extensions/extensions/emoji/
-  [5]: http://emojione.com/demo/
-  [6]: http://emojione.com
-  [7]: https://creativecommons.org/licenses/by/4.0/legalcode
-  [8]: http://emojione.com/licensing/
 
 #### MagicLink
 
@@ -186,64 +165,6 @@ tags on separate lines and adding new lines between the tags and the content.
   [18]: https://facelessuser.github.io/pymdown-extensions/extensions/critic/
   [19]: http://criticmarkup.com/
 
-### Arithmatex <small>MathJax</small>
-
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-[Arithmatex][20] integrates Material with [MathJax][21] which parses
-block-style and inline equations written in TeX markup and outputs them in
-mathematical notation. See [this thread][22] for a short introduction and quick
-reference on how to write equations in TeX syntax.
-
-Besides activating the extension in the `mkdocs.yml`, the MathJax JavaScript
-runtime needs to be included. This must be done with
-[additional JavaScript][23]:
-
-``` yaml
-extra_javascript:
-  - 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML'
-```
-
-If you want to override the default MathJax configuration, you can do this by
-adding another JavaScript file **before** the MathJax runtime in
-`extra_javascript` which contains your MathJax configuration, e.g.:
-
-``` js
-window.MathJax = {
-  tex2jax: {
-    inlineMath: [ ["\\(","\\)"] ],
-    displayMath: [ ["\\[","\\]"] ]
-  },
-  TeX: {
-    TagSide: "right",
-    TagIndent: ".8em",
-    MultLineWidth: "85%",
-    equationNumbers: {
-      autoNumber: "AMS",
-    },
-    unicode: {
-      fonts: "STIXGeneral,'Arial Unicode MS'"
-    }
-  },
-  displayAlign: "left",
-  showProcessingMessages: false,
-  messageStyle: "none"
-};
-```
-
-In your `mkdocs.yml`, include it with:
-
-``` yaml
-extra_javascript:
-  - 'javascripts/extra.js'
-  - 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML'
-```
-
-  [20]: https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/
-  [21]: https://www.mathjax.org/
-  [22]: http://meta.math.stackexchange.com/questions/5020/
-  [23]: ../customization.md#additional-javascript
-
 #### Blocks
 
 Blocks are enclosed in `:::tex $$...$$` which are placed on separate lines.
@@ -284,4 +205,3 @@ achived by prefixing inline code with a shebang and language identifier,
 e.g. `#!js`.
 
   [24]: https://facelessuser.github.io/pymdown-extensions/extensions/inlinehilite/
-
