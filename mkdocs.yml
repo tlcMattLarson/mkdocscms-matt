@@ -1,8 +1,8 @@
-site_name: Online-Dokumentationen
+site_name: TLC IT Documentation
 theme: readthedocs
 site_description: A Material Design theme for MkDocs
-site_author: Meinolf Droste
-site_url: http://mdwp-mkdocs-cms.netlify.com/
+site_author: TLC
+site_url: https://tlcdocsite.netlify.com/
 
 extra:
   social:
